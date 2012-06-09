@@ -8,7 +8,7 @@ This extension currently provides access to:
 - NSLog
 
 # Settings Bundle #
-![image](assets/screen.png)
+![image](https://github.com/memeller/iOSNativeUtilities/raw/master/assets/screen.png)
 [docs on developer.apple.com](http://developer.apple.com/library/ios/#DOCUMENTATION/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
 
 *Usage:*
