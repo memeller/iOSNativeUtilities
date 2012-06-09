@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Unzip" >
+	
+	<fx:Script>
+		<![CDATA[
+			import pl.mllr.extensions.nativeUtils.NativeUtils;
+			import pl.mllr.extensions.nativeUtils.NativeUtilsZipEvent;
+			var utils:NativeUtils=new NativeUtils();
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				if(NativeUtils.isSupported)
+				{
+					logView.appendText("supported, working...\n");	
+					
+					var file:File=File.applicationDirectory.resolvePath("file.zip");
+					logView.appendText(file.nativePath + " to: " + File.documentsDirectory.nativePath+"\n");
+					utils.addEventListener(NativeUtilsZipEvent.START,logEvent);
+					utils.addEventListener(NativeUtilsZipEvent.PROGRESS,logEvent);
+					utils.addEventListener(NativeUtilsZipEvent.COMPLETE,logEvent);
+					utils.unzipFile(file.nativePath,File.documentsDirectory.nativePath);
+					logView.appendText("unzip complete\n");
+				}
+				else
+					logView.appendText("not supported\n");
+			}
+			protected function logEvent(e:NativeUtilsZipEvent):void
+			{
+				if(e.type==NativeUtilsZipEvent.PROGRESS)
+				{
+					logView.appendText("progress: " + e.percentage + "%\n");
+				}
+				else
+					logView.appendText("event info: "+e.type+", file: " + e.index + "\n");
+			}
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				if(NativeUtils.isSupported)
+				{
+					logView.appendText("supported, working...\n");	
+					
+					var file:File=File.applicationDirectory.resolvePath("file.zip");
+					if(file.exists)
+					{
+						logView.appendText(file.nativePath + " to: " + File.applicationStorageDirectory.nativePath+"\n");
+						utils.addEventListener(NativeUtilsZipEvent.START,logEvent);
+						utils.addEventListener(NativeUtilsZipEvent.PROGRESS,logEvent);
+						utils.addEventListener(NativeUtilsZipEvent.COMPLETE,logEvent);
+						utils.unzipFile(file.nativePath,File.documentsDirectory.nativePath);
+						logView.appendText("unzip complete\n");
+					}
+					else 
+					{
+						logView.appendText("file not found\n");
+					}
+				}
+				else
+					logView.appendText("not supported\n");
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:HGroup width="100%" height="60" horizontalAlign="center" verticalAlign="middle">
+	<s:Button x="10" y="10" width="40%" label="unzip file to documents" click="button2_clickHandler(event)"/>
+	<s:Button x="266" y="10" width="40%" label="unzip file to storage" click="button1_clickHandler(event)"/>
+	</s:HGroup>
+	<s:TextArea left="10" right="10" top="61" bottom="10" id="logView"/>
+</s:View>

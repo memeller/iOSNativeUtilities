@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="NSLog">
+	
+	<fx:Script>
+		<![CDATA[
+			import flash.net.navigateToURL;
+			import pl.mllr.extensions.nativeUtils.NativeUtils;
+			var utils:NativeUtils=new NativeUtils();
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				//if(NativeUtils.isSupported)
+				utils.nslog(input.text);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:HGroup left="10" width="100%" height="60" horizontalAlign="left" verticalAlign="middle">
+		
+		<s:TextInput left="10" top="10" width="60%" height="42" id="input"/>
+	<s:Button right="10" top="10" width="30%" height="42" label="log text using NSLog"
+			  click="button1_clickHandler(event)"/>
+	</s:HGroup>
+	<s:HGroup left="10" top="60" width="100%" height="60" horizontalAlign="left"
+			  verticalAlign="middle">
+		<s:Label text="To see logs on your device go to appstore and search&#xd;for free application called system console, install it and voila"
+				 textAlign="left"/>
+		</s:HGroup>
+	
+</s:View>

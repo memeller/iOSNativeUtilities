@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.adobe.nativeExtensions.Networkinfo.InterfaceAddress"/>
+    <classEntry path="pl.mllr.extensions.nativeUtils.NativeUtils"/>
+    <classEntry path="pl.mllr.extensions.nativeUtils.Settings"/>
+    <classEntry path="pl.mllr.extensions.nativeUtils.NativeUtilsZipEvent"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

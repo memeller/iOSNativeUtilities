@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Bundle.Settings">
+	
+	<fx:Script>
+		<![CDATA[
+			import pl.mllr.extensions.nativeUtils.NativeUtils;
+			var utils:NativeUtils=new NativeUtils();
+			protected function button3_clickHandler(event:MouseEvent):void
+			{
+				if(NativeUtils.isSupported)
+				utils.settings.loadSettingsDefaults();
+			}
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				if(NativeUtils.isSupported)
+					logView.appendText("value for key 'name_preference': " + utils.settings.getStringValue("name_preference")+"\n");
+			}
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				if(NativeUtils.isSupported)
+				utils.settings.setStringValue("name_preference",input.text);
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:HGroup width="100%" height="45" horizontalAlign="left" verticalAlign="middle">
+		<s:Label text="1. Remember to load defaults!l"/>
+		<s:Button width="40%" label="loadDefaults" click="button3_clickHandler(event)"/>
+	</s:HGroup>
+	<s:VGroup  top="45" width="100%">
+		
+	
+	<s:HGroup width="100%" height="45" horizontalAlign="left" verticalAlign="middle">
+		<s:Label text="2. get / set value"/>
+		<s:TextInput id="input" prompt="new value"/>
+		<s:Button width="20%" label="saveData" click="button2_clickHandler(event)"/>
+		<s:Button width="20%" label="loadData" click="button1_clickHandler(event)"/>
+	</s:HGroup>
+	</s:VGroup>
+	<s:TextArea left="10" right="10" top="100" bottom="10" id="logView"/>
+</s:View>

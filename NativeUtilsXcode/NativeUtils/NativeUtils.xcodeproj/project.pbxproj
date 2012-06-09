@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C9145EC157371E60038B939 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145E3157371E60038B939 /* crypt.h */; };
+		8C9145ED157371E60038B939 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C9145E4157371E60038B939 /* ioapi.c */; };
+		8C9145EE157371E60038B939 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145E5157371E60038B939 /* ioapi.h */; };
+		8C9145EF157371E60038B939 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C9145E6157371E60038B939 /* mztools.c */; };
+		8C9145F0157371E60038B939 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145E7157371E60038B939 /* mztools.h */; };
+		8C9145F1157371E60038B939 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C9145E8157371E60038B939 /* unzip.c */; };
+		8C9145F2157371E60038B939 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145E9157371E60038B939 /* unzip.h */; };
+		8C9145F3157371E60038B939 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C9145EA157371E60038B939 /* zip.c */; };
+		8C9145F4157371E60038B939 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145EB157371E60038B939 /* zip.h */; };
+		8C9145F9157376A90038B939 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9145F8157376A90038B939 /* SSZipArchive.m */; };
+		8C9145FB157376B50038B939 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9145FA157376B50038B939 /* SSZipArchive.h */; };
+		8C91461B1573FCE00038B939 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C91461A1573FCE00038B939 /* libz.1.2.5.dylib */; };
+		8C91461C1573FE8E0038B939 /* libz.1.2.5.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 8C91461A1573FCE00038B939 /* libz.1.2.5.dylib */; };
+		8C9146211573FF150038B939 /* NativeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C91461E1573FF150038B939 /* NativeUtils.h */; };
+		8C9146221573FF150038B939 /* NativeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91461F1573FF150038B939 /* NativeUtils.m */; };
+		8CF5E4541524D1CA00ABAD50 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF5E4021524D1CA00ABAD50 /* FlashRuntimeExtensions.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C9145E3157371E60038B939 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		8C9145E4157371E60038B939 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		8C9145E5157371E60038B939 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		8C9145E6157371E60038B939 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		8C9145E7157371E60038B939 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		8C9145E8157371E60038B939 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		8C9145E9157371E60038B939 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		8C9145EA157371E60038B939 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		8C9145EB157371E60038B939 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		8C9145F8157376A90038B939 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		8C9145FA157376B50038B939 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		8C9146191573F3560038B939 /* libNativeUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libNativeUtils.a; path = "/Users/me/Documents/private_projects/NativeUtils/Release-iphoneos/libNativeUtils.a"; sourceTree = "<absolute>"; };
+		8C91461A1573FCE00038B939 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		8C91461E1573FF150038B939 /* NativeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeUtils.h; sourceTree = "<group>"; };
+		8C91461F1573FF150038B939 /* NativeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeUtils.m; sourceTree = "<group>"; };
+		8C9146261573FF750038B939 /* libNativeUtils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNativeUtils.a; path = ../build/ios/libNativeUtils.a; sourceTree = "<group>"; };
+		8CF5E4021524D1CA00ABAD50 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CF5E3D21524D1AC00ABAD50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C91461B1573FCE00038B939 /* libz.1.2.5.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C9145E2157371E60038B939 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				8C9145E3157371E60038B939 /* crypt.h */,
+				8C9145E4157371E60038B939 /* ioapi.c */,
+				8C9145E5157371E60038B939 /* ioapi.h */,
+				8C9145E6157371E60038B939 /* mztools.c */,
+				8C9145E7157371E60038B939 /* mztools.h */,
+				8C9145E8157371E60038B939 /* unzip.c */,
+				8C9145E9157371E60038B939 /* unzip.h */,
+				8C9145EA157371E60038B939 /* zip.c */,
+				8C9145EB157371E60038B939 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		8C91461D1573FF150038B939 /* NativeUtils */ = {
+			isa = PBXGroup;
+			children = (
+				8C91461E1573FF150038B939 /* NativeUtils.h */,
+				8C91461F1573FF150038B939 /* NativeUtils.m */,
+			);
+			path = NativeUtils;
+			sourceTree = "<group>";
+		};
+		8CF5E3CA1524D1AB00ABAD50 = {
+			isa = PBXGroup;
+			children = (
+				8C9146261573FF750038B939 /* libNativeUtils.a */,
+				8C91461A1573FCE00038B939 /* libz.1.2.5.dylib */,
+				8C9145FA157376B50038B939 /* SSZipArchive.h */,
+				8C9145F8157376A90038B939 /* SSZipArchive.m */,
+				8C9145E2157371E60038B939 /* minizip */,
+				8CF5E4021524D1CA00ABAD50 /* FlashRuntimeExtensions.h */,
+				8C91461D1573FF150038B939 /* NativeUtils */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8CF5E3D31524D1AC00ABAD50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF5E4541524D1CA00ABAD50 /* FlashRuntimeExtensions.h in Headers */,
+				8C9145EC157371E60038B939 /* crypt.h in Headers */,
+				8C9145EE157371E60038B939 /* ioapi.h in Headers */,
+				8C9145F0157371E60038B939 /* mztools.h in Headers */,
+				8C9145F2157371E60038B939 /* unzip.h in Headers */,
+				8C9145F4157371E60038B939 /* zip.h in Headers */,
+				8C9145FB157376B50038B939 /* SSZipArchive.h in Headers */,
+				8C9146211573FF150038B939 /* NativeUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8CF5E3D41524D1AC00ABAD50 /* NativeUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF5E3FC1524D1AC00ABAD50 /* Build configuration list for PBXNativeTarget "NativeUtils" */;
+			buildPhases = (
+				8CF5E3D11524D1AC00ABAD50 /* Sources */,
+				8CF5E3D21524D1AC00ABAD50 /* Frameworks */,
+				8CF5E3D31524D1AC00ABAD50 /* Headers */,
+				8CF5E4991524D9F800ABAD50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativeUtils;
+			productName = VfrPdfReader;
+			productReference = 8C9146191573F3560038B939 /* libNativeUtils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CF5E3CC1524D1AB00ABAD50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 8CF5E3CF1524D1AB00ABAD50 /* Build configuration list for PBXProject "NativeUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 8CF5E3CA1524D1AB00ABAD50;
+			productRefGroup = 8CF5E3CA1524D1AB00ABAD50;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CF5E3D41524D1AC00ABAD50 /* NativeUtils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CF5E4991524D9F800ABAD50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C91461C1573FE8E0038B939 /* libz.1.2.5.dylib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CF5E3D11524D1AC00ABAD50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9145ED157371E60038B939 /* ioapi.c in Sources */,
+				8C9145EF157371E60038B939 /* mztools.c in Sources */,
+				8C9145F1157371E60038B939 /* unzip.c in Sources */,
+				8C9145F3157371E60038B939 /* zip.c in Sources */,
+				8C9145F9157376A90038B939 /* SSZipArchive.m in Sources */,
+				8C9146221573FF150038B939 /* NativeUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8CF5E3FA1524D1AC00ABAD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8CF5E3FB1524D1AC00ABAD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CF5E3FD1524D1AC00ABAD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = /Users/me/Documents/private_projects/build/ios;
+				DSTROOT = /tmp/VfrPdfReader.dst;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/ios\"",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CF5E3FE1524D1AC00ABAD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/VfrPdfReader.dst;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/ios\"",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CF5E3CF1524D1AB00ABAD50 /* Build configuration list for PBXProject "NativeUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5E3FA1524D1AC00ABAD50 /* Debug */,
+				8CF5E3FB1524D1AC00ABAD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF5E3FC1524D1AC00ABAD50 /* Build configuration list for PBXNativeTarget "NativeUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF5E3FD1524D1AC00ABAD50 /* Debug */,
+				8CF5E3FE1524D1AC00ABAD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CF5E3CC1524D1AB00ABAD50 /* Project object */;
+}
