@@ -4,46 +4,71 @@ package pl.mllr.extensions.nativeUtils
 	import flash.events.EventDispatcher;
 	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
-
+	import flash.system.Capabilities;
+	
+	
 	public class NativeUtils extends EventDispatcher
 	{
 		
 		public static const EXTENSION_ID : String = "pl.mllr.extensions.nativeUtils";
 		
 		private var context:ExtensionContext = null;
-		private static var _set:Boolean = false;
-		private static var _isSupp:Boolean = false;
 		private var _settings:Settings;
 		
 		public function get settings():Settings
 		{
 			if(!_settings)
 			{
-				_settings=new Settings(context);
+				_settings = new Settings(context);
 			}
 			return _settings;
 		}
+		
+		
 		public function NativeUtils()
 		{
-			
 			try{
 				context = ExtensionContext.createExtensionContext(EXTENSION_ID, null);
-				
 				context.addEventListener(StatusEvent.STATUS, onStatus);
 			}catch(e:Error){
-				trace(e.message,e.errorID);
+				handleError("NativeUtils initialization error : "+e.message,e.errorID);
 			}
 		}
+		
+		
 		public function dispose():void{
 			if(context){
 				context.removeEventListener(StatusEvent.STATUS, onStatus);
 				context.dispose();
 			}
 		}
+		
+		
 		protected function onStatus(e:StatusEvent):void
 		{
 			dispatchEvent(new NativeUtilsZipEvent(e.level,e.code));
 		}
+		
+		
+		public function unzipFile(sourceFile:String,destinationDirectory:String):void
+		{
+			try{
+				context.call("unzipFile",sourceFile,destinationDirectory);
+			}catch(e:Error){
+				handleError("unzipFile not supported on this platform   " +e.message,e.errorID);
+			}
+		}
+		public function nslog(string:String):void
+		{
+			try{
+				context.call("nativeUtilsNSLog",string);
+			}catch(e:Error){
+				handleError("nslog not supported on this platform   " +e.message,e.errorID);
+			}
+		}
+		
+		
+		
 		override public function hasEventListener(type:String):Boolean{
 			if(type == ErrorEvent.ERROR)
 				return context.hasEventListener(type);
@@ -62,39 +87,25 @@ package pl.mllr.extensions.nativeUtils
 			else
 				super.removeEventListener(type,listener,useCapture);
 		}
-		public function unzipFile(sourceFile:String,destinationDirectory:String):void
+		
+		
+		
+		private function handleError(text:String,id:int=0):void
 		{
-			try{
-				context.call("unzipFile",sourceFile,destinationDirectory);
-			}catch(e:Error){
-				trace("not supported on this platform");
-			}
+			if(context.hasEventListener(ErrorEvent.ERROR))
+				context.dispatchEvent(new ErrorEvent(ErrorEvent.ERROR,false,false,text,id));
+			else
+				trace(text);
 		}
-		public function nslog(string:String):void
-		{
-			try{
-				context.call("nativeUtilsNSLog",string);
-			}catch(e:Error){
-				trace("not supported on this platform");
-			}
-		}
+		
 		/**
-		 * Whether the VfrPdfReader is available on the device (true);<br>otherwise false
+		 * Whether the Extension is available on the device (true);<br>otherwise false
 		 */
 		public static function get isSupported():Boolean{
-			if(!_set){// checks if a value was set before
-				try{
-					_set = true;
-					var _context:ExtensionContext = ExtensionContext.createExtensionContext(EXTENSION_ID, null);
-					_isSupp = _context.call("nativeUtilsIsSupported");
-					_context.dispose();
-				}catch(e:Error){
-					trace(e.message,e.errorID);
-					return _isSupp;
-				}
-			}	
-			return _isSupp;
-			
+			if(Capabilities.os.toLowerCase().indexOf("ip")!=-1)
+				return true;
+			else 
+				return false;
 		}
 	}
 }

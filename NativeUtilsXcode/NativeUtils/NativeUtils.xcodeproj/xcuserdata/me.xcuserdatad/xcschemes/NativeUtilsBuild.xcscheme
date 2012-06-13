@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8CF5E3D41524D1AC00ABAD50"
-               BuildableName = "libVfrPdfReader.a"
+               BuildableName = "libNativeUtils.a"
                BlueprintName = "NativeUtils"
                ReferencedContainer = "container:NativeUtils.xcodeproj">
             </BuildableReference>

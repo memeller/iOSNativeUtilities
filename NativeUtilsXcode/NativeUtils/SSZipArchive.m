@@ -224,12 +224,12 @@
             
             // Create the symbolic link
             NSError* symlinkError = nil;
-            [fileManager createSymbolicLinkAtURL:symlinkURL withDestinationURL:destinationURL error:&symlinkError];
+            //[fileManager createSymbolicLinkAtURL:symlinkURL withDestinationURL:destinationURL error:&symlinkError];
             
-            if(symlinkError != nil)
-            {
+           // if(symlinkError != nil)
+            //{
                 NSLog(@"Failed to create symbolic link at \"%@\" to \"%@\". Error: %@", symlinkURL.absoluteString, destinationURL.absoluteString, symlinkError.localizedDescription);
-            }
+           // }
         }
 		
 		unzCloseCurrentFile( zip );
